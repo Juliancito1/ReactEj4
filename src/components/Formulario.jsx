@@ -12,6 +12,11 @@ const handleSubmit = (e) => {
   setTarea('');
 }
 
+const borrarTarea = (nombreTarea) => {
+  let arregloFiltrado = listadoTareas.filter((itemTarea) => itemTarea !== nombreTarea);
+  setListadoTareas(arregloFiltrado);
+}
+
     return (
         <section>
             <Form onSubmit={handleSubmit}>
@@ -23,7 +28,7 @@ const handleSubmit = (e) => {
       </Button>
       </Form.Group>
     </Form>
-    <ListaTareas listadoTareas={listadoTareas}></ListaTareas>
+    <ListaTareas listadoTareas={listadoTareas} borrarTarea={borrarTarea}></ListaTareas>
         </section>
     );
 };
