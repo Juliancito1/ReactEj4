@@ -23,7 +23,7 @@ const handleSubmit = (e) => {
       </Button>
       </Form.Group>
     </Form>
-    <ListaTareas/>
+    <ListaTareas listadoTareas={listadoTareas}></ListaTareas>
         </section>
     );
 };
